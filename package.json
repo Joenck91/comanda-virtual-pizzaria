@@ -1,0 +1,23 @@
+{
+  "name": "comanda-virtual-pizzaria",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joenck91/comanda-virtual-pizzaria.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joenck91/comanda-virtual-pizzaria/issues"
+  },
+  "homepage": "https://github.com/Joenck91/comanda-virtual-pizzaria#readme",
+  "description": "Projeto de uma comanda virtual de pizzaria para pratica e aprendizado com Javascript.",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
