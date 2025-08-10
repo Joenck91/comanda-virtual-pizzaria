@@ -1,0 +1,10 @@
+.body-style{
+    background-color: #f0f0f0;
+}
+.paper-style{
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}

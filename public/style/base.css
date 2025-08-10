@@ -1,0 +1,39 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+html, body{
+width:100%;
+display:flex;
+flex-direction:column;
+align-items: center;
+justify-content: start;
+overflow: auto;
+}
+h1{
+    padding-bottom: 15px;
+}
+h2{
+    padding-bottom: 10px;
+}
+p{
+    margin: 5px 0;
+}
+label {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;  
+}
+input[type="radio"] {
+    margin-right: 5px;
+    margin: 5px;
+}
+input[type="search"], input[type="text"] {
+    padding: 3px;
+    margin: 5px 0;
+    border: 1px dashed #777;
+}
+input:hover{
+    cursor: pointer;
+}
