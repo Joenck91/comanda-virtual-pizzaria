@@ -1,0 +1,7 @@
+.menu-exit{/*botão que fecha o cardápio*/
+    display: flex;
+    position: sticky;
+    top:0;
+    width: fit-content;
+    margin-left: auto;
+}
