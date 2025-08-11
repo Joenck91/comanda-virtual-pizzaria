@@ -11,6 +11,7 @@ export default function viewMenuBox (menu){
          const exit = document.createElement('button');
         exit.type ='button';
         exit.classList.add('menu-exit')
+        exit.classList.add('exit-delete')
         exit.id = 'menuExit'; 
         exit.textContent = 'Sair';
         box.appendChild(exit);
