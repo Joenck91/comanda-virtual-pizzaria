@@ -13,21 +13,21 @@
 <body class="body-style">
     <main>
         <div class="paper-style">
-                        <!-- Área visual (fora do form) -->
-            <div class="command-box">
-                <h1>Comanda Virtual</h1>
-                <div class="view-menu-box" id="view-menu-box"></div>
 
-                <div class="sentinela-box">
-                    <div id="sentinela"></div>
-                    <div class="total" id="totalDiv">
-                        <h2><strong>Total</strong></h2>
-                        <p>R$50,00</p>
-                    </div>
+            <!-- Área visual (fora do form) -->
+
+            <div class="total-box" id="total-box">
+                <div id="sentinela"></div>
+                <div class="total" id="total">
+                    <p><strong>Total</strong></h2>
+                    <p>R$50,00</p>
                 </div>
-
-                <button type="button" id="view-menu">Ver Cardápio</button>
             </div>
+
+            <h2>Comanda Virtual</h2>
+
+            <div class="view-menu-box" id="view-menu-box"></div>
+            <button type="button" class="buttons" id="view-menu">Ver Cardápio</button>
 
             <!-- FORMULÁRIO -->
             <form id="form-request" method="POST" action="/send-request" autocomplete="off">
@@ -67,6 +67,8 @@
                         <p class="pizza-features">45cm - 20 fatias - 4 sabores</p>
                     </div>
                 </div>
+
+
 
                 <!-- Sabores -->
                 <div id="choose-pizza-box" class="choose-pizza-box">
@@ -110,6 +112,14 @@
                         </label>
                     </div>
                 </div>
+
+
+
+
+
+
+
+
 
                 <!-- Bebidas -->
                 <div class="drink-box">
@@ -159,6 +169,6 @@
         </div>
     </main>
 
-<script type="module" src="scripts/main.js"></script>
+<script type="module" src="/public/script/main.js"></script>
 </body>
 </html>
