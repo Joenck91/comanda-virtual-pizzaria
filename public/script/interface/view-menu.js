@@ -8,7 +8,7 @@ export default function viewMenuBox (menu){
         titlePizza.textContent = 'Pizzas';
         box.appendChild(titlePizza);
 
-         const exit = document.createElement('button');
+        const exit = document.createElement('button');
         exit.type ='button';
         exit.classList.add('menu-exit')
         exit.classList.add('exit-delete')

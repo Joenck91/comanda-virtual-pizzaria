@@ -2,10 +2,12 @@ import totalFixed from "./interface/total-fixed.js";
 import viewMenuBox from "./interface/view-menu.js";
 import menuShowClose from "./buttons/menu-show-close.js";
 import chooseSize from "./interface/choose-sizes.js";
+import unitPizza from "./interface/unit-pizza.js";
 
 
 totalFixed();               //Fixa a etiqueta total no topo da tela.
 chooseSize();               //Define quantidade de sabores de acordo com o tamanho selecionado.
+unitPizza();                //Insere ou remove mais pizzas.
 
 //Funções que precisam acessar json.
 document.addEventListener('DOMContentLoaded', ()=>{
