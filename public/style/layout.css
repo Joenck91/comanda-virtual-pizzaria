@@ -56,7 +56,6 @@
     padding: 10px;
     margin: 15px 0;
 }
-
 .border-pizza-box, .size-pizza-box{/*Box com opções de bordas*/
 
     display: flex;
@@ -68,6 +67,9 @@
     display: flex;
     flex-direction: column;
     position: relative;
+}
+.flavor_three, .flavor_four{/*Referente ao terceiro e quarto sabro que só devem aparecer conforme escolha de tamanhos.*/
+    display: none;
 }
 /*-----------------------------------------------------------------------------*/
 /*                        UNIDADE DE BEBIDA                                    */

@@ -2,9 +2,7 @@ import viewMenuBox from "./interface/view-menu.js";
 import menuShowClose from "./buttons/menu-show-close.js";
 import * as inputsContent from "./interface/inputs-contents.js"
 import chooseSize from "./interface/choose-sizes.js";
-import { showBorders, showDrinks, showFlavors, showsizes } from "./interface/inputs-contents.js";
 
-//chooseSize();               //Define quantidade de sabores de acordo com o tamanho selecionado.
 
 
 //Funções que precisam acessar json.
@@ -22,6 +20,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
         inputsContent.showsizes(menu.sizes);
         inputsContent.showFlavors(menu.pizzas);
         inputsContent.showDrinks(menu.drinks);  
+
+
+        chooseSize();//Define quantidade de sabores de acordo com o tamanho selecionado.
     })
     .catch(err => console.error('Erro ao carregar menu:', err));// Captura e exibe no console qualquer erro ocorrido ao carregar o menu.
 });

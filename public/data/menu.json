@@ -2,19 +2,24 @@
     "sizes":[
         {
             "name":"Pequena",
-            "price":35.00
+            "price":35.00,
+            "value":"small"
         },{
             "name":"Media",
-            "price":42.00
+            "price":42.00,
+            "value":"average"
         },{
             "name":"Grande",
-            "price":55.00
+            "price":55.00,
+            "value":"larger"
         },{
             "name":"Gigante",
-            "price":65.00
+            "price":65.00,
+            "value":"giant"
         },{
             "name":"king",
-            "price":85.00
+            "price":85.00,
+            "value":"king"
         }
     ],
     "pizzas":[
