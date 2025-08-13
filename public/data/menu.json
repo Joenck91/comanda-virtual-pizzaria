@@ -1,22 +1,27 @@
 {
     "sizes":[
-        {
+        {   
+            "id":"s1",
             "name":"PEQUENA(2 sabores, 6 fatias, 25cm)",
             "price":35.00,
             "value":"small"
         },{
+            "id":"s2",
             "name":"MEDIA(2 sabores, 8 fatias, 30cm)",
             "price":42.00,
             "value":"average"
         },{
+            "id":"s3",
             "name":"GRANDE(3 sabores, 12 fatias, 35cm)",
             "price":55.00,
             "value":"larger"
         },{
+            "id":"s4",
             "name":"GIGANTE(4 sabores, 16 fatias, 40cm)",
             "price":65.00,
             "value":"giant"
         },{
+            "id":"s5",
             "name":"KING(4 sabores, 20 fatias, 45cm)",
             "price":85.00,
             "value":"king"
@@ -215,48 +220,61 @@
     ],
     "drinks":[
         {
+            "id":"d1",
             "name":"Coca-Cola 2l",
             "price":10.00
         },{
+            "id":"d2",
             "name":"Guaraná 2l",
             "price":10.00
         },{
+            "id":"d3",
             "name":"Coca-Cola Lata",
             "price":5.00
         },{
+            "id":"d4",
             "name":"Guaraná Lata",
             "price":5.00
         },{
+            "id":"d5",
             "name":"Cerveja 600ml",
             "price":12.00
         },{
+            "id":"d6",
             "name":"Cerveja Lata",
             "price":7.00
         }
     ],
     "borders":[
         {
+            "id":"b1",
             "name":"Catupiry",
             "price":8.00
         },{
+            "id":"b2",
             "name":"Cheddar",
             "price":8.00
         },{
+            "id":"b3",
             "name":"Chocolate Preto",
             "price":9.00
         },{
+            "id":"b4",
             "name":"Chocolate Branco",
             "price":9.00
         },{
+            "id":"b5",
             "name":"Nenhuma",
             "price":0.00
         }
     ],
     "delivery":[
         {
+            "id":"moto",
             "name":"Motoboy",
             "price":8.00
         },{
+            "id":"local",
             "name":"Retirar no Local",
             "price":0.00
         }
