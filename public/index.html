@@ -24,98 +24,94 @@
     </header>
     
     <main>
-        <div class="view-menu-box" id="view-menu-box"></div>
-        <!-- FORMULÁRIO -->
-        <form id="form-request" method="POST" action="/send-request" autocomplete="off">
-            <div class="command-pizza">
-                <div class="unit-pizza-box"><!--box referente a uma unidade de pizza. Caso usuário queira mais pizzas, mais divs como essa será acrescentada ao formulário.-->
 
-                    <!-- Borda recheada -->
-                    <div class="filling-box pad-bot-10">
-                        <div class="border-pizza-box">
-                            <label for="border"><h4>Borda Recheada:</h4></label>
-                            <select name="border" id="border">
-                                <option value="none">
-                                    <p>Nenhum</p>
-                                </option>
-                                <option value="catupiry">
-                                    <p>Catupiry - R$8,00</p>
-                                </option>
-                                <option value="cheddar">
-                                    <p>Cheddar - R$8,00</p>
-                                </option>
-                                <option value="chocoBlack">
-                                    <p>Chocolate Preto - R$9,00</p>
-                                </option>
-                                <option value="chocoWhite">
-                                    <p>Chocolate Branco - R$9,00</p>
-                                </option>
-                            </select>         
-                        </div>
+        <div class="command-pizza">
+            <div class="view-menu-box" id="view-menu-box"></div>  
+            <div class="unit-pizza-box"><!--box referente a uma unidade de pizza. Caso usuário queira mais pizzas, mais divs como essa será acrescentada ao formulário.-->
+
+                <!-- Borda recheada -->
+                <div class="filling-box pad-bot-10">
+                    <div class="border-pizza-box">
+                        <label for="border"><h4>Borda Recheada:</h4></label>
+                        <select name="border" id="border">
+                            <option value="none">
+                                <p>Nenhum</p>
+                            </option>
+                            <option value="catupiry">
+                                <p>Catupiry - R$8,00</p>
+                            </option>
+                            <option value="cheddar">
+                                <p>Cheddar - R$8,00</p>
+                            </option>
+                            <option value="chocoBlack">
+                                <p>Chocolate Preto - R$9,00</p>
+                            </option>
+                            <option value="chocoWhite">
+                                <p>Chocolate Branco - R$9,00</p>
+                            </option>
+                        </select>         
                     </div>
-            
-                    <!-- Tamanho da pizza -->
-                    <div class="size-pizza-box">
-                        <div class="label-size-box pad-bot-10">
-                            <label for="size"><h4>Tamanho:</h4></label>
-                            <select name="size" id="size">
-                                <option value="small">
-                                    <p>PEQUENA(25cm - 6 fatias - 2 sabores) - R$35,00 </p>
-                                </option>
-                                <option value="average">
-                                    <p>MÉDIA(30cm - 8 fatias - 2 sabores) - R$42,00</p>
-                                </option>
-                                <option value="large">
-                                    <p>GRANDE(35cm - 12 fatias - 3 sabores) - R$55,00</p>
-                                </option>
-                                <option value="giant">
-                                    <p>GIGANTE(40cm - 16 fatias - 4 sabores) - R$65,00</p>
-                                </option>
-                                <option value="king">
-                                    <p>KING(45cm - 20 fatias - 4 sabores) - R$85,00</p>
-                                </option>
-
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Sabores -->
-                    <div id="choose-pizza-box" class="choose-pizza-box pad-bot-10">
-                        <button type="button" class="exit-delete view-menu-button" id="view-menu"><strong>Ver Cardápio</strong></button>
-                        <label for="flavors"><h4>Sabores:</h4></label>
-                        <select name="flavors" id="flavor_one">
-                            <option value="flavor_one">Escolha o primeiro sabor</option>
-                        </select>
-                        <select name="flavors" id="flavor_two">
-                            <option value="flavor_two">Escolha o segundo sabor</option>
-                        </select>
-                        <select name="flavors" id="flavor_three">
-                            <option value="flavor_three">Escolha o terceiro sabor</option>
-                        </select>
-                        <select name="flavors" id="flavor_four">
-                            <option value="flavor_four">Escolha o quarto sabor</option>
-                        </select>
-                    </div>
-
-                    <button type="button" class="exit-delete"><strong>Adicionar á Comanda</strong></button>
                 </div>
-            </div>      
-            <!-- Bebidas -->
-            <div class="drink-box">
-                <div class="choose-drink-box">
-                    <label for="drinks"><h4>Bebidas:</h4></label>
-                    <select name="drinks" id="">
-                        <option value="drinks">Selecione uma bebida.</option>
+        
+                <!-- Tamanho da pizza -->
+                <div class="size-pizza-box pad-bot-10">
+                    <label for="size"><h4>Tamanho:</h4></label>
+                    <select name="size" id="size">
+                        <option value="small">
+                            <p>PEQUENA(25cm - 6 fatias - 2 sabores) - R$35,00 </p>
+                        </option>
+                        <option value="average">
+                            <p>MÉDIA(30cm - 8 fatias - 2 sabores) - R$42,00</p>
+                        </option>
+                        <option value="large">
+                            <p>GRANDE(35cm - 12 fatias - 3 sabores) - R$55,00</p>
+                        </option>
+                        <option value="giant">
+                            <p>GIGANTE(40cm - 16 fatias - 4 sabores) - R$65,00</p>
+                        </option>
+                        <option value="king">
+                            <p>KING(45cm - 20 fatias - 4 sabores) - R$85,00</p>
+                        </option>
                     </select>
                 </div>
-                <div class="unit-input-drink">
-                    <label for="unit-drink"><h5>Quantidade:</h5></label>
-                    <input type="number" name="unit-drink" id="unit-drink" min="1" value="1" required>
+
+                <!-- Sabores -->
+                <div id="choose-pizza-box" class="choose-pizza-box pad-bot-10">
+                    <button type="button" class="exit-delete view-menu-button" id="view-menu"><strong>Ver Cardápio</strong></button>
+                    <label for="flavors"><h4>Sabores:</h4></label>
+                    <select name="flavors" id="flavor_one">
+                        <option value="flavor_one">Escolha o primeiro sabor</option>
+                    </select>
+                    <select name="flavors" id="flavor_two">
+                        <option value="flavor_two">Escolha o segundo sabor</option>
+                    </select>
+                    <select name="flavors" id="flavor_three">
+                        <option value="flavor_three">Escolha o terceiro sabor</option>
+                    </select>
+                    <select name="flavors" id="flavor_four">
+                        <option value="flavor_four">Escolha o quarto sabor</option>
+                    </select>
                 </div>
+
                 <button type="button" class="exit-delete"><strong>Adicionar á Comanda</strong></button>
             </div>
+        </div>      
+        <!-- Bebidas -->
+        <div class="command-drink">
+            <div class="choose-drink-box">
+                <label for="drinks"><h4>Bebidas:</h4></label>
+                <select name="drinks" id="">
+                    <option value="drinks">Selecione uma bebida.</option>
+                </select>
+            </div>
+            <div class="unit-input-drink">
+                <label for="unit-drink"><h5>Quantidade:</h5></label>
+                <input type="number" name="unit-drink" id="unit-drink" min="1" value="1" required>
+            </div>
+            <button type="button" class="exit-delete"><strong>Adicionar á Comanda</strong></button>
+        </div>
 
-            <!-- Entrega >
+        <!-- Entrega >
             <div class="adress-box">
                 <h2>Entregar</h2>
                 <label>
@@ -147,8 +143,6 @@
             <div class="button-box">
                 <button type="submit" style="margin-top: 10px;">Finalizar Pedido</button>
             </div-->
-        </form>
-
     </main>
     <footer>
         <p>Desenvolvido por <a href="www.instagram.com/joenckluis">Luis Joenck</a></p>
