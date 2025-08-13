@@ -1,19 +1,29 @@
 /*-----------------------------------------------------------------------------*/
-/*                     BOTÕES FECHAR PAGINAS OU DELETAR                        */
+/*                             BOTÕES                                          */
 /*-----------------------------------------------------------------------------*/
-
+.view-menu-button{
+    position: absolute;
+    top: -120px;
+    right: 5px;;
+}
 .menu-exit{/*botão que fecha o cardápio*/
     display: flex;
     position: sticky;
     top:0;
     width: fit-content;
     margin-left: auto;
-}
-.exit-delete{
     background-color: #f0f0f0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
     0 2px 4px rgba(0, 0, 0, 0.06);
-    border-radius: 3px 8px;    
+    border-radius: 2px 10px;    
+}
+.exit-delete{/*Estilo para os botões que cancelam itens*/
+    width: fit-content;
+    outline: 1px dashed #777;
+    border: none;
+    border-radius: 10px 5px;
+    background-color: white;
+    font-style: italic;
 }
 /*-----------------------------------------------------------------------------*/
 /*                     PARA VÁRIOS ELEMENTOS                                   */

@@ -86,6 +86,7 @@ function unitPizza (id){
                             </label>
                         </div>
                     </div>
+                    <button type="button" class="exit-delete"><strong>Adicionar á Comanda</strong></button>
     `;
 
     return div_element;

@@ -11,168 +11,148 @@
     <link rel="stylesheet" href="/public/style/responsive.css">
 </head>
 <body class="body-style">
-    <main>
-        <div class="paper-style">
-
-            <!-- Área visual (fora do form) -->
-
-            <div class="total-box" id="total-box">
-                <div id="sentinela"></div>
-                <div class="total" id="total">
-                    <p><strong>Total</strong></h2>
-                    <p>R$50,00</p>
-                </div>
-            </div>
-
+    <header>
+        <div class="title-buttons">
             <h2>Comanda Virtual</h2>
+        </div>
+        <div class="command-box" id="total">
+            <p><strong>Pedido</strong></h2>
+                <!--CRIAR ESTRUTURA DE PEDIDO COM JSON-->
+            
+        </div>
 
-            <div class="view-menu-box" id="view-menu-box"></div>
-            <button type="button" id="view-menu">Ver Cardápio</button>
+    </header>
+    
+    <main>
+        <div class="view-menu-box" id="view-menu-box"></div>
+        <!-- FORMULÁRIO -->
+        <form id="form-request" method="POST" action="/send-request" autocomplete="off">
+            <div class="command-pizza">
+                <div class="unit-pizza-box"><!--box referente a uma unidade de pizza. Caso usuário queira mais pizzas, mais divs como essa será acrescentada ao formulário.-->
 
-            <!-- FORMULÁRIO -->
-            <form id="form-request" method="POST" action="/send-request" autocomplete="off">
-                
-                <div class="command-pizza">
-                    <div class="unit-pizza-box"><!--box referente a uma unidade de pizza. Caso usuário queira mais pizzas, mais divs como essa será acrescentada ao formulário.-->
-                
+                    <!-- Borda recheada -->
+                    <div class="filling-box pad-bot-10">
+                        <div class="border-pizza-box">
+                            <label for="border"><h4>Borda Recheada:</h4></label>
+                            <select name="border" id="border">
+                                <option value="none">
+                                    <p>Nenhum</p>
+                                </option>
+                                <option value="catupiry">
+                                    <p>Catupiry - R$8,00</p>
+                                </option>
+                                <option value="cheddar">
+                                    <p>Cheddar - R$8,00</p>
+                                </option>
+                                <option value="chocoBlack">
+                                    <p>Chocolate Preto - R$9,00</p>
+                                </option>
+                                <option value="chocoWhite">
+                                    <p>Chocolate Branco - R$9,00</p>
+                                </option>
+                            </select>         
+                        </div>
+                    </div>
+            
                     <!-- Tamanho da pizza -->
                     <div class="size-pizza-box">
-                        <h4>Tamanho</h4>
                         <div class="label-size-box pad-bot-10">
-                            <label>
-                                <input type="radio" name="size" value="small" checked>
-                                <p><strong>PEQUENA - R$35,00</strong></p>
-                            </label>
-                            <p class="pizza-features">25cm - 6 fatias - 2 sabores</p>
+                            <label for="size"><h4>Tamanho:</h4></label>
+                            <select name="size" id="size">
+                                <option value="small">
+                                    <p>PEQUENA(25cm - 6 fatias - 2 sabores) - R$35,00 </p>
+                                </option>
+                                <option value="average">
+                                    <p>MÉDIA(30cm - 8 fatias - 2 sabores) - R$42,00</p>
+                                </option>
+                                <option value="large">
+                                    <p>GRANDE(35cm - 12 fatias - 3 sabores) - R$55,00</p>
+                                </option>
+                                <option value="giant">
+                                    <p>GIGANTE(40cm - 16 fatias - 4 sabores) - R$65,00</p>
+                                </option>
+                                <option value="king">
+                                    <p>KING(45cm - 20 fatias - 4 sabores) - R$85,00</p>
+                                </option>
 
-                            <label>
-                                <input type="radio" name="size" value="average">
-                                <p><strong>MÉDIA - R$42,00</strong></p>
-                            </label>
-                            <p class="pizza-features">30cm - 8 fatias - 2 sabores</p>
-
-                            <label>
-                                <input type="radio" name="size" value="large">
-                                <p><strong>GRANDE - R$55,00</strong></p>
-                            </label>
-                            <p class="pizza-features">35cm - 12 fatias - 3 sabores</p>
-
-                            <label>
-                                <input type="radio" name="size" value="giant">
-                                <p><strong>GIGANTE - R$65,00</strong></p>
-                            </label>
-                            <p class="pizza-features">40cm - 16 fatias - 4 sabores</p>
-
-                            <label>
-                                <input type="radio" name="size" value="king">
-                                <p><strong>KING - R$85,00</strong></p>
-                            </label>
-                            <p class="pizza-features">45cm - 20 fatias - 4 sabores</p>
+                            </select>
                         </div>
                     </div>
 
                     <!-- Sabores -->
                     <div id="choose-pizza-box" class="choose-pizza-box pad-bot-10">
-                        <h4>Sabores</h4>
-                        <label>
-                            <input type="search" name="flavor_one" placeholder="Escolha o primeiro sabor">
-                        </label>
-                        <label>
-                            <input type="search" name="flavor_two" placeholder="Escolha o segundo sabor">
-                        </label>
-                        <label>
-                            <input style="display: none;" type="search" name="flavor_three"  class="flavor_three" placeholder="Escolha o terceiro sabor">
-                        </label>
-                        <label>
-                            <input style="display: none;" type="search" name="flavor_four" class="flavor_four" placeholder="Escolha o quarto sabor">
-                        </label>
+                        <button type="button" class="exit-delete view-menu-button" id="view-menu"><strong>Ver Cardápio</strong></button>
+                        <label for="flavors"><h4>Sabores:</h4></label>
+                        <select name="flavors" id="flavor_one">
+                            <option value="flavor_one">Escolha o primeiro sabor</option>
+                        </select>
+                        <select name="flavors" id="flavor_two">
+                            <option value="flavor_two">Escolha o segundo sabor</option>
+                        </select>
+                        <select name="flavors" id="flavor_three">
+                            <option value="flavor_three">Escolha o terceiro sabor</option>
+                        </select>
+                        <select name="flavors" id="flavor_four">
+                            <option value="flavor_four">Escolha o quarto sabor</option>
+                        </select>
                     </div>
 
-                    <!-- Borda recheada -->
-                    <div class="filling-box pad-bot-10">
-                        <h4>Borda Recheada</h4>
-                        <div class="border-pizza-box">
-                            <label>
-                                <input type="radio" name="border" value="catupiry">
-                                <p>Catupiry - R$8,00</p>
-                            </label>
-                            <label>
-                                <input type="radio" name="border" value="cheddar">
-                                <p>Cheddar - R$8,00</p>
-                            </label>
-                            <label>
-                                <input type="radio" name="border" value="chocolatePreto">
-                                <p>Chocolate Preto - R$9,00</p>
-                            </label>
-                            <label>
-                                <input type="radio" name="border" value="chocolateBranco">
-                                <p>Chocolate Branco - R$9,00</p>
-                            </label>
-                            <label>
-                                <input type="radio" name="border" value="nenhum" checked>
-                                <p>Nenhuma</p>
-                            </label>
-                        </div>
-                    </div>
-                    </div>
+                    <button type="button" class="exit-delete"><strong>Adicionar á Comanda</strong></button>
                 </div>
-
-                <button type="button" id="add-pizza"> add pizza</button>
-
-
-
-
-
-
-
-
-                <!-- Bebidas -->
-                <div class="drink-box">
-                    <h2>Bebidas</h2>
-                    <div id="drink-container">
-                        <div class="drink-item">
-                            <input type="search" name="drink[]" placeholder="Escolha uma bebida">
-                            <button type="button" class="remove-drink exit-delete">-</button>
-                        </div>
-                    </div>
-                    <button type="button" id="add-drink">Adicionar bebida</button>
+            </div>      
+            <!-- Bebidas -->
+            <div class="drink-box">
+                <div class="choose-drink-box">
+                    <label for="drinks"><h4>Bebidas:</h4></label>
+                    <select name="drinks" id="">
+                        <option value="drinks">Selecione uma bebida.</option>
+                    </select>
                 </div>
+                <div class="unit-input-drink">
+                    <label for="unit-drink"><h5>Quantidade:</h5></label>
+                    <input type="number" name="unit-drink" id="unit-drink" min="1" value="1" required>
+                </div>
+                <button type="button" class="exit-delete"><strong>Adicionar á Comanda</strong></button>
+            </div>
 
-                <!-- Entrega -->
-                <div class="adress-box">
-                    <h2>Entregar</h2>
+            <!-- Entrega >
+            <div class="adress-box">
+                <h2>Entregar</h2>
+                <label>
+                    <input type="radio" name="delivery_method" value="deliver" checked>
+                    <input type="text" name="address" placeholder="Digite seu endereço">
+                </label>
+                <label>
+                    <input type="radio" name="delivery_method" value="local">
+                    <p>Retirar no local</p>
+                </label>
+            </div>
+
+            < Pagamento >
+            <div class="payment-box">
+                <h2>Forma de pagamento</h2>
+                <div class="payment-method-box">
                     <label>
-                        <input type="radio" name="delivery_method" value="deliver" checked>
-                        <input type="text" name="address" placeholder="Digite seu endereço">
+                        <input type="radio" name="payment" value="pixmoney" checked>
+                        <p>Pix/Dinheiro</p>
                     </label>
                     <label>
-                        <input type="radio" name="delivery_method" value="local">
-                        <p>Retirar no local</p>
+                        <input type="radio" name="payment" value="card">
+                        <p>Cartão</p>
                     </label>
                 </div>
+            </div>
 
-                <!-- Pagamento -->
-                <div class="payment-box">
-                    <h2>Forma de pagamento</h2>
-                    <div class="payment-method-box">
-                        <label>
-                            <input type="radio" name="payment" value="pixmoney" checked>
-                            <p>Pix/Dinheiro</p>
-                        </label>
-                        <label>
-                            <input type="radio" name="payment" value="card">
-                            <p>Cartão</p>
-                        </label>
-                    </div>
-                </div>
+            < Botão de envio >
+            <div class="button-box">
+                <button type="submit" style="margin-top: 10px;">Finalizar Pedido</button>
+            </div-->
+        </form>
 
-                <!-- Botão de envio -->
-                <div class="button-box">
-                    <button type="submit" style="width: 100%; margin-top: 10px;">Finalizar Pedido</button>
-                </div>
-            </form>
-        </div>
     </main>
+    <footer>
+        <p>Desenvolvido por <a href="www.instagram.com/joenckluis">Luis Joenck</a></p>
+    </footer>
 
 <script type="module" src="/public/script/main.js"></script>
 </body>
