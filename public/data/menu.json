@@ -242,6 +242,9 @@
         },{
             "name":"Chocolate Branco",
             "price":9.00
+        },{
+            "name":"Nenhuma",
+            "price":0.00
         }
     ],
     "delivery":[
