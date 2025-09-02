@@ -8,7 +8,18 @@ export default function writingOrder (menu){
         e.preventDefault(); // evita reload da página
         //código aqui
 
-        console.log(formPizza);
+        const pizzaOrder = {
+            pizza: formPizza.size.value,
+            borda: formPizza.border.value,
+            sabores: [
+                formPizza.flavor_one.value,
+                formPizza.flavor_two.value,
+                formPizza.flavor_three.value,
+                formPizza.flavor_four.value
+            ].filter(sabor => sabor), // Remove valores vazios
+        };
+        notedOrder.push(pizzaOrder);
+        console.log(notedOrder);
 
 
     });
