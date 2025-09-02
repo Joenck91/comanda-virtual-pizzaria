@@ -1,3 +1,5 @@
+import * as visualCommand from "./visual-command.js";
+
 // Array que guarda todos os pedidos da sessão
 let pizzaAddItem = [];
 let drinkAddItem = [];
@@ -10,9 +12,9 @@ export default function writingOrder (menu){
         //código aqui
 
         const pizzaOrder = {
-            pizza: formPizza.size.value,
-            borda: formPizza.border.value,
-            sabores: [
+            size: formPizza.size.value,
+            border: formPizza.border.value,
+            flavors: [
                 formPizza.flavor_one.value,
                 formPizza.flavor_two.value,
                 formPizza.flavor_three.value,
@@ -21,6 +23,7 @@ export default function writingOrder (menu){
         };
         pizzaAddItem.push(pizzaOrder);
         console.log(pizzaAddItem);
+        visualCommand.displayPizzaOrder(pizzaAddItem);
 
 
         formPizza.reset();// Limpa o formulário após o envio
@@ -32,11 +35,12 @@ export default function writingOrder (menu){
         e.preventDefault(); //evita reload da página
         //código aqui
         const drinkOrder = {
-            bebida: formDrinks.drinks.value,
-            quantidade: formDrinks.unitDrink.value
+            drink: formDrinks.drinks.value,
+            units: formDrinks.unitDrink.value
         };
         drinkAddItem.push(drinkOrder);
         console.log(drinkAddItem);
+        visualCommand.displayDrinkOrder(drinkAddItem);
 
 
        formDrinks.reset();// Limpa o formulário após o envio
