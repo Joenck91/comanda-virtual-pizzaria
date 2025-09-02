@@ -1,5 +1,6 @@
 // Array que guarda todos os pedidos da sessão
-let notedOrder = [];
+let pizzaAddItem = [];
+let drinkAddItem = [];
 
 export default function writingOrder (menu){
     // Captura o envio do formulário de pizza
@@ -18,10 +19,11 @@ export default function writingOrder (menu){
                 formPizza.flavor_four.value
             ].filter(sabor => sabor), // Remove valores vazios
         };
-        notedOrder.push(pizzaOrder);
-        console.log(notedOrder);
+        pizzaAddItem.push(pizzaOrder);
+        console.log(pizzaAddItem);
 
 
+        formPizza.reset();// Limpa o formulário após o envio
     });
 
     //Captura o envio do formulário de bebidas
@@ -29,7 +31,15 @@ export default function writingOrder (menu){
     formDrinks.addEventListener('submit', (e) =>{
         e.preventDefault(); //evita reload da página
         //código aqui
-        console.log(formDrinks);
+        const drinkOrder = {
+            bebida: formDrinks.drinks.value,
+            quantidade: formDrinks.unitDrink.value
+        };
+        drinkAddItem.push(drinkOrder);
+        console.log(drinkAddItem);
+
+
+       formDrinks.reset();// Limpa o formulário após o envio
     });
 
 };
