@@ -16,6 +16,24 @@
     flex-direction: column;
     align-items: center;
 }
+.pizza-order-box{/*Box que mostra o pedido de pizza escolhido*/
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    max-width: 600px;
+    margin: 10px 0;
+    align-items: start;
+    font-size: smaller;
+}
+.drink-order-box{/*Box que mostra o pedido de bebida escolhido*/
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    max-width: 600px;
+    margin: 10px 0;
+    align-items: start;
+    font-size: smaller;
+}
 /*-----------------------------------------------------------------------------*/
 /*                              CARDÁPIO                                       */
 /*-----------------------------------------------------------------------------*/
@@ -68,7 +86,7 @@
     flex-direction: column;
     position: relative;
 }
-.flavor_three, .flavor_four{/*Referente ao terceiro e quarto sabro que só devem aparecer conforme escolha de tamanhos.*/
+.flavor_three, .flavor_four{/*Referente ao terceiro e quarto sabor que só devem aparecer conforme escolha de tamanhos.*/
     display: none;
 }
 /*-----------------------------------------------------------------------------*/
